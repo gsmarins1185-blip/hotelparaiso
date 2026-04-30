@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--ESTILO-->
+    <link rel="stylesheet" href="estilo/style.css"> <!--ESTILO-->
+    <script src="script/scriptHP.js"></script>
+
+    <title>Reserva</title>
+    <style>
+        /* ------------------ */
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <!-- <img src="image/logo-hotel-paraiso.png" alt="Hotel-logo" height="100"> -->
+            <div class="menu">
+                <ul>
+                    <li><a href="HotelParaiso.html">Home</a></li>
+                    <li><a href="quartosHP.html">Quartos</a></li>
+                    <li><a href="hospedesHP.html">Hóspedes</a></li>
+                    <li><a href="localizacao.html">Localização</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="reservasHP.html">Reservas</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <img src="image/logo-hotel-paraiso.png" alt="" width="150px">
+
+    </div>
+    <h2>Faça sua Reserva </h2>
+    <div class="principal">
+
+
+        <form id="formHospedes">
+
+            <div class="formulario">
+                <div class="grid-01">
+
+                    <label for="nomeHospede">Nome Completo do Hóspede:</label>
+                    <input type="text" id="nomeHospede" placeholder="Nome completo" required>
+
+                    <label for="emailReserva">E-mail:</label>
+                    <input type="email" id="emailReserva" placeholder="exemplo@email.com" required>
+                    <!-- type="email": ativa validação nativa e teclado
+                             adequado em dispositivos móveis -->
+
+                    <label for="telefoneReserva">Telefone (WhatsApp):</label>
+                    <input type="tel" id="telefoneReserva" placeholder="(00) 00000-0000" required>
+                    <!-- type="tel": ativa teclado numérico em mobile e
+                             permite máscaras via IMask -->
+
+                    <label for="checkin">Data de Check-in:</label>
+                    <input type="date" id="checkin" required>
+
+                    <label for="checkout">Data de Check-out:</label>
+                    <input type="date" id="checkout" required>
+
+
+                </div>
+
+                <div class="grid-02">
+
+                    <label for="tipoQuarto">Tipo de Quarto:</label>
+                    <select id="tipoQuarto" required>
+                        <option value="">Selecione...</option>
+                        <option value="solteiro">Quarto Solteiro </option>
+                        <option value="casal">Quarto Casal </option>
+                        <option value="duplo"> Quarto Duplo </option>
+                        <option value="suite-standard">Suíte Standard</option>
+                        <option value="suite-luxo">Suíte Luxo</option>
+                        <option value="suite-master">Suíte Master</option>
+                        <option value="familia">Familiar </option>
+                    </select>
+
+                    <label for="numQuartos">Número de Quartos:</label>
+                    <input type="number" id="numQuartos" max="2" required>
+                    <label for="adultos">Número de Adultos:</label>
+                    <input type="number" id="adultos" min="1" max="10" value="1" required>
+
+                    <label for="criancas">Número de Crianças:</label>
+                    <input type="number" id="criancas" min="0" max="10" value="0">
+
+                    <label for="formaPagamento">Forma de Pagamento:</label>
+                    <select id="formaPagamento">
+                        <option value="">Selecione...</option>
+                        <option value="credito">Cartão de Crédito</option>
+                        <option value="debito">Cartão de Débito</option>
+                        <option value="pix">PIX</option>
+                        <option value="dinheiro">Dinheiro</option>
+                    </select>
+                </div>
+            </div>
+            <label for="observacoes">Observações e Pedidos Especiais:</label>
+            <textarea id="observacoes"
+                placeholder="Ex.: quarto no andar alto, berço para bebê, restrições alimentares, horário de chegada previsto..."></textarea>
+
+        </form>
+
+        <input type="button" value="Reservar" onclick="reservar()">
+        <input type="button" value="Página Principal" onclick="homepage()">
+        <input type="button" value="Limpar" onclick="limpar()">
+
+    </div>
+    <script src="https://unpkg.com/imask" defer></script>
+</body>
+
+</html>
